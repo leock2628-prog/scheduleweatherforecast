@@ -23,6 +23,6 @@ jobs:
 
       - name: Run weather bot
         env:
-          TELEGRAM_TOKEN: ${{ secrets.8639347317:AAFQmaHKdEzdl_7TK35EE4gDy6v8s7PJ9rw }}
-          TELEGRAM_CHAT_ID: ${{ secrets.392834759 }}
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+  TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python weather_bot.py
