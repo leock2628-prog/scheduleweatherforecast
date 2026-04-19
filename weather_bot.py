@@ -4,8 +4,8 @@ from datetime import datetime
 
 # ===== 從環境變數讀取（GitHub Secrets）=====
 # 本機測試時可直接填入，部署後改用 Secrets
-TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "8639347317:AAFQmaHKdEzdl_7TK35EE4gDy6v8s7PJ9rw")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "392834759")
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "YOUR_BOT_TOKEN" )
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID" )
 # ==========================================
 
 CITIES = {
