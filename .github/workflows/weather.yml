@@ -1,0 +1,28 @@
+name: Daily Weather Bot
+
+on:
+  schedule:
+    - cron: "0 22 * * *"  # UTC 22:00 = 台灣時間 06:00
+  workflow_dispatch:       # 允許手動觸發測試
+
+jobs:
+  send-weather:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run weather bot
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.8639347317:AAFQmaHKdEzdl_7TK35EE4gDy6v8s7PJ9rw }}
+          TELEGRAM_CHAT_ID: ${{ secrets.392834759 }}
+        run: python weather_bot.py
